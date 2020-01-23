@@ -91,7 +91,7 @@ def __maingame__(values, cards):
     pAceCount, sum_player = black_jack.__random__(Player)
     dAceCount, sum_dealer = black_jack.__random__(Dealer)
     black_jack.__print__()
-    print("Players Sum:", sum_player)
+    print("Players Sum of cards is:", sum_player)
     playerBet = int(input("How much Bet Amount you are going to place:"))
     global playerAccount
 
@@ -130,7 +130,7 @@ def __maingame__(values, cards):
                 if sum_player > 21 and pAceCount:
                     sum_player -= 10
                     pAceCount -= 1
-                    print("Player have an 'Ace' card" + "\nPlayer's sum is ",sum_player)
+                    print("Player have an 'Ace' card" + "\nPlayer's sum of cards is ",sum_player)
                 elif sum_player > 21 and not pAceCount:
                     dealerplaying, playactive = False, False
                     print("\nDEALER WON THE MATCH!")
